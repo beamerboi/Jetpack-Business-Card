@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
             BusinessCardTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = Color(0xFFD2E8D4) // Light mint green background
+                    color = Color(0xFFD2E8D4) 
                 ) {
                     BusinessCardScreen()
                 }
@@ -57,13 +57,12 @@ fun BusinessCardScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFD2E8D4)),  // Light mint green background
+            .background(Color(0xFFD2E8D4)),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        // Logo - Using your GitHub image
         Image(
-            painter = painterResource(id = R.drawable.android_logo), // Replace with your actual image name without extension
+            painter = painterResource(id = R.drawable.android_logo),
             contentDescription = "Logo",
             modifier = Modifier
                 .size(120.dp)
@@ -73,31 +72,27 @@ fun BusinessCardScreen() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Name
         Text(
             text = "Ghasssen JEMIAI",
             fontSize = 28.sp,
             fontWeight = FontWeight.Medium,
-            color = Color(0xFF073042) // Dark blue
+            color = Color(0xFF073042)
         )
 
-        // Title
         Text(
             text = "Software Engineer",
             fontSize = 16.sp,
-            color = Color(0xFF006A36),  // Green
+            color = Color(0xFF006A36),
             fontWeight = FontWeight.Medium
         )
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        // Contact Information
         Column(
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.spacedBy(8.dp),
             modifier = Modifier.padding(horizontal = 16.dp)
         ) {
-            // Phone
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -131,7 +126,6 @@ fun BusinessCardScreen() {
                 )
             }
 
-            // Email
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
